@@ -1,15 +1,14 @@
 board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
 
-def turn_count
-  turn = 0
-  @board.each do |moves|
-    if moves == "X" || moves == "O"
-      turn += 1
-    end
+def turn_count(board)
+  n_spaces = 0   
+  
+  board.size.times do |i|
+    if board [i] == "X"
+      n_spaces += 1  
+    end 
   end
-  return turn
-end
 
 def current_players_turn
   num_turns = turn_count
